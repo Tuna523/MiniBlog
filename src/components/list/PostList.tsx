@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 // 이 post 배열의 map 함수를 이용해 각 post 객체에 대해서 postList 컴포넌트를 만들어 렌더링 하게 한다.
 
 function PostList(props:any) {
-    console.log(props);
+
     const { posts, onCLickItem } = props;
 
     return (

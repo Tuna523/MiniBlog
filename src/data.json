@@ -1,4 +1,4 @@
 [
-        {"id" : "1", "title" : "title is here", "content" : "content is here", "comments" : "comment is here"},
-        {"id" : "2", "title" : "title is here", "content" : "content is here", "comments" : "comment is here"}
+        {"id" : "1", "title" : "title is here", "content" : "content is here", "comments" : ["hello", "hi"]},
+        {"id" : "2", "title" : "title is here", "content" : "content is here", "comments" : ["hello2", "hi2"]}
 ]

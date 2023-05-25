@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 // 이 배열에는 comment 객체들이 있고, 이 배열에 map 함수를 사용해 각 댓글객체를 commentListItem 컴포넌트로 넘겨 화면에 댓글을 표시.
 function CommentList(props: any) {
     const { comments } = props;
-
+console.log(comments);
     return (
         <Wrapper>
             {comments.map((comment:any, index:number) => {

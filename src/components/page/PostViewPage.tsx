@@ -53,8 +53,7 @@ const CommentLabel = styled.p`
 function PostViewPage(props:any) {
     const navigate = useNavigate();
     const { postId } = useParams();
-    let data: any = {};
-    const post = data.values.find((item:any) => {
+    const post : any = data.find((item:any) => {
         return item.id == postId;
     });
 
@@ -70,16 +69,26 @@ function PostViewPage(props:any) {
                     }}
                 />
                 <PostContainer>
-                    <TitleText>{post?.title}</TitleText>
-                    <ContentText>{post?.content}</ContentText>
+                    <TitleText>{post.title}</TitleText>
+                    <ContentText>{post.content}</ContentText>
                 </PostContainer>
 
                 <CommentLabel>댓글</CommentLabel>
-                <CommentList comments={post?.comments} />
+                <CommentList comments={post.comments} />
 
-                <TextInput>
-
-                </TextInput>
+                <TextInput
+                    rows={40}
+                    defaultValue={comment}
+                    onChange={(event:any) => {
+                        setComment(event.target.value);
+                    }}
+                />
+                <Button
+                    title="댓글 작성"
+                    onClick={()=> {
+                        navigate("/");
+                    }}
+                />
             </Container>
         </Wrapper>
     )

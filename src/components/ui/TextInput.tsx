@@ -20,7 +20,7 @@ function TextInput(props:any) {
     const { height, value, onChange } = props;
 
     return (
-        <StyledTextarea cols={height} value={value} onChange={onChange} />
+        <StyledTextarea rows={height} defaultValue={value} onChange={onChange} />
     )
 }
 
