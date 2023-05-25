@@ -38,16 +38,16 @@ function PostWritePage(props:any) {
             <Container>
                 {/* 실제 화면에 나타나는 부분은 textInput 컴포넌트를 사용해 글의 제목과 내용을 각각 입력받을 수  있게 */}
                 <TextInput
-                    height={20}
-                    value={props.title}
+                    rows={20}
+                    defaultValue={props.title}
                     onChange={(event:any) => {
                         setTitle(event.target.value);
                     }}
                 />
 
                 <TextInput
-                    height={40}
-                    value={content}
+                    rows={40}
+                    defaultValue={content}
                     onCHange={(event:any) => {
                         setContent(event.target.value);
                     }}

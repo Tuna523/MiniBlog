@@ -64,7 +64,7 @@ function PostViewPage(props:any) {
             <Container>
                 <Button
                     title="뒤로 가기"
-                    onCLick={()=> {
+                    onClick={()=> {
                         navigate("/");
                     }}
                 />
