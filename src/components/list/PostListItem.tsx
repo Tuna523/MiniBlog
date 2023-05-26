@@ -24,8 +24,9 @@ const TitleText = styled.p`
 
 //타이틀 텍스트를 이용해 props로 받은 포스트객체에 들어있는 타이틀 문자열을 표시한다.
 function PostListItem(props:any) {
-    const { post, onClick } = props;
 
+    const { post, onClick } = props;
+    
     return (
         <Wrapper onClick={onClick}>
             <TitleText>{post.title}</TitleText>

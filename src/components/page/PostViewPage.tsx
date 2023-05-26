@@ -51,9 +51,12 @@ const CommentLabel = styled.p`
 // 그 후, 찾은 글의 제목, 내용, 댓글을 렌더링 하고 그 아래엔 TextInput, Button 컴포넌트를 이용해 댓글을 작성할 수 있게 ui를 제공한다.
 
 function PostViewPage(props:any) {
+    
     const navigate = useNavigate();
     const { postId } = useParams();
     const post : any = data.find((item:any) => {
+        console.log(item.id);
+        console.log(postId);
         return item.id == postId;
     });
 
@@ -77,8 +80,8 @@ function PostViewPage(props:any) {
                 <CommentList comments={post.comments} />
 
                 <TextInput
-                    rows={40}
-                    defaultValue={comment}
+                    rows={3}
+                    value={comment}
                     onChange={(event:any) => {
                         setComment(event.target.value);
                     }}

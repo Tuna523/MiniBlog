@@ -30,6 +30,7 @@ const Container = styled.div`
 
 // 페이지 이동을 위해 react-router-dom 에 useNavigate 훅을 사용
 function MainPage(props:any) {
+    
     const navigate = useNavigate();
 
     return (
@@ -44,7 +45,7 @@ function MainPage(props:any) {
 
                 <PostList
                     posts={data}
-                    onCLickItem={(item: any) => {
+                    onClickItem={(item: any) => {
                         navigate(`/post/${item.id}`);
                     }}
                 />

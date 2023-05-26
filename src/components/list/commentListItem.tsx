@@ -27,8 +27,9 @@ const ContentText = styled.p`
 // 이를 styled-component를 통해 만든 contentText라는 컴포넌트를 이용해 화면에 표시한다.
 // 글 클릭은 가능하지만 댓글은 onClick event가 따로 없도록 해준다.
 function CommentListItem(props:any) {
-    const { comment } = props;
 
+    const { comment } = props;
+    
     return (
         <Wrapper>
             <ContentText>{comment.content}</ContentText>

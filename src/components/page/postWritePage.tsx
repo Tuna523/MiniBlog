@@ -28,6 +28,7 @@ const Container = styled.div`
 // 두 개의 state 모두 useState hook을 이용해 선언
 
 function PostWritePage(props:any) {
+    
     const navigate = useNavigate();
 
     const [title, setTitle] = useState("")
@@ -38,17 +39,17 @@ function PostWritePage(props:any) {
             <Container>
                 {/* 실제 화면에 나타나는 부분은 textInput 컴포넌트를 사용해 글의 제목과 내용을 각각 입력받을 수  있게 */}
                 <TextInput
-                    rows={20}
-                    defaultValue={props.title}
+                    rows={3}
+                    value={title}
                     onChange={(event:any) => {
                         setTitle(event.target.value);
                     }}
                 />
 
                 <TextInput
-                    rows={40}
-                    defaultValue={content}
-                    onCHange={(event:any) => {
+                    rows={10}
+                    value={content}
+                    onChange={(event:any) => {
                         setContent(event.target.value);
                     }}
                 />
