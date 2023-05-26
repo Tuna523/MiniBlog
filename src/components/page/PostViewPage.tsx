@@ -55,8 +55,6 @@ function PostViewPage(props:any) {
     const navigate = useNavigate();
     const { postId } = useParams();
     const post : any = data.find((item:any) => {
-        console.log(item.id);
-        console.log(postId);
         return item.id == postId;
     });
 

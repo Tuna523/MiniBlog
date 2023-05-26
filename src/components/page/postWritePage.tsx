@@ -37,6 +37,13 @@ function PostWritePage(props:any) {
     return (
         <Wrapper>
             <Container>
+                <Button
+                    title="뒤로 가기"
+                    onClick={()=> {
+                        navigate("/");
+                    }}
+                />
+                
                 {/* 실제 화면에 나타나는 부분은 textInput 컴포넌트를 사용해 글의 제목과 내용을 각각 입력받을 수  있게 */}
                 <TextInput
                     rows={3}

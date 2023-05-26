@@ -24,7 +24,6 @@ function CommentList(props: any) {
     return (
         <Wrapper>
             {comments.map((comment:any, index:number) => {
-                console.log(comments);
                 return (
                     <CommentListItem key={index} comment={comment} index={index} />
                 )
